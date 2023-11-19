@@ -1,8 +1,4 @@
-<?php
-session_start();
-if(isset($_SESSION["userName"]) && isset($_SESSION["phone"])){
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +10,12 @@ if(isset($_SESSION["userName"]) && isset($_SESSION["phone"])){
 </head>
 
 <body>
+  <?php
+session_start();
+if(isset($_SESSION["userName"]) && isset($_SESSION["phone"])){
+
+?>
+
   <h1>ChatRoom</h1>
   <div class="chat">
     <h2>Welcome to <span><?= $_SESSION["userName"]?></span></h2>
